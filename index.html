@@ -1,56 +1,177 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
 
-  <body>
-    
-    <div class="container-header">
-      <heade class="page-header">
-        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="./img/duck.png" width="10%" alt="duck logo"></a>
-    <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-current="page" href="#">Anagrafica utenti</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link disabled" aria-current="page" href="#">Storico Prestiti</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-current="page" href="#">Help</a>
-        </li>
-      </ul>
-      <form class="d-flex " role="search">
-        <input class="form-control me-2 " type="search" placeholder="Cerca..." aria-label="Search" style="background-color: white;" />
-        <button class="btn border border-dark-subtle" type="submit">Cerca</button>
-      </form>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./img/duck.png" width="10%" alt="duck logo"></a>
+      <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Catalogo Libri</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">Anagrafica utenti</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link disabled" aria-current="page" href="#">Storico Prestiti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" aria-current="page" href="#">Help</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 " type="search" placeholder="Cerca..." aria-label="Search"
+            style="background-color: white;" />
+          <button class="btn border border-dark-subtle" type="submit">Cerca</button>
+        </form>
+      </div>
     </div>
-  </div>
-</nav>
-      </heade>
-      <!-- /.page-header -->
+  </nav>
+
+  <main class="main">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col col-12 col-md-12 col-lg-8">
+          <header class="page-header">
+            <div class="add-book d-flex justify-content-between">
+              <h1>Catalogo Libri</h1>
+              <button class="btn btn-primary" type="submit">Aggiungi libro</button>
+            </div>
+            <!-- /.add-book -->
+          </header>
+          <!-- /.page-header -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Titolo</th>
+                <th scope="col">Stato</th>
+                <th scope="col">Azioni</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-warning">In prestito</span>
+                </td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-danger">Non disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-warning">In prestito</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-danger">Non disponibile</span>
+                </td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-warning">In prestito</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+              <tr class="table-secondary">
+                <td>I pilastri della terra</td>
+                <td><span class="badge text-bg-success">Disponibile</span></td>
+                <td><i class="bi bi-pencil-fill btn btn-outline-secondary"></i></i><i
+                    class="bi bi-trash-fill btn btn-outline-secondary"></i>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+        <div class="col col-12 col-md-12 col-lg-4 bg-primary-subtle">
+          Column
+        </div>
+      </div>
     </div>
-    <!-- /.container-header -->
+
+  </main>
+  <!-- /.main -->
 
 
 
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
 </html>
