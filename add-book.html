@@ -14,7 +14,7 @@
   <!-- navbar -->
   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"><img src="./img/duck.png" width="50px" alt="duck logo"></a>
+      <a class="navbar-brand" href="index.html"><img src="./img/duck.png" width="50" alt="duck logo"></a>
       <button class="navbar-toggler navbar-dark " type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -34,19 +34,81 @@
           <li class="nav-item">
             <a class="nav-link disabled" aria-current="page" href="#">Help</a>
           </li>
+        </ul>
       </div>
     </div>
   </nav>
 
   <main class="main">
-    <div class="container text-center">
+    <div class="container">
+
+      <header class="page-header">
+        <h1 class="class">Nuovo Libro</h1>
+      </header>
+      <!-- /.page-header -->
+
+      <form class="row g-3">
+        <div class="col-6">
+          <label for="inputNome" class="form-label">Nome Autore</label>
+          <input type="text" class="form-control" id="inputNome" placeholder="Inserisci il nome dell'Autore">
+        </div>
+        <div class="col-6">
+          <label for="inputCognome" class="form-label">Cognome Autore</label>
+          <input type="text" class="form-control" id="inputCognome" placeholder="Inserisci il cognome dell'Autore">
+        </div>
+        <div class="col-12">
+          <label for="inputTitolo" class="form-label">Titolo</label>
+          <input type="text" class="form-control" id="inputTitolo" placeholder="Inserisci il titolo del libro">
+          <div id="passwordHelpBlock" class="form-text">
+            Titolo versione italiana
+          </div>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <label for="inputGenere" class="form-label">Genere</label>
+          <select id="inputGenere" class="form-select">
+            <option selected>Scegli il genere</option>
+            <option>Science fiction</option>
+            <option>Horror</option>
+            <option>Fantasy</option>
+          </select>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <label for="inputAnno" class="form-label">Anno di Pubblicazione</label>
+          <input type="number" class="form-control" id="inputAnno" placeholder="Inserisci l'anno">
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <label for="inputIsbn" class="form-label">ISBN#</label>
+          <input type="text" class="form-control" id="inputIsbn" placeholder="Inserisci il codice ISBN#">
+        </div>
+
+        <hr>
+
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Note</label>
+          <textarea class="form-control" id="exampleNote" rows="3" placeholder="Inserisci eventuali note sul libro"></textarea>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+              Disponibile anche in digitale
+            </label>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <a href="index.html" class="btn btn-primary" type="submit">Aggiungi libro</a>
+        </div>
+      </form>
+      <!-- /.form -->
+    </div>
+    <!-- /.container -->
   </main>
   <!-- /.main -->
-
-
-
-
-
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
